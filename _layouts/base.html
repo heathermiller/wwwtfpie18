@@ -1,35 +1,93 @@
 ---
-common-css:
-  - "/css/bootstrap.min.css"
-  - "/css/bootstrap-social.css"
-  - "/css/main.css"
-common-ext-css:
-  - "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
-common-googlefonts:
-  - "Lora:400,700,400italic,700italic"
-  - "Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-common-js:
-  - "/js/jquery-1.11.2.min.js"
-  - "/js/bootstrap.min.js"
-  - "/js/main.js"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <!--
+  Design by TEMPLATED
+  http://templated.co
+  Released for free under the Creative Commons Attribution License
+
+  Name       : Adequately
+  Description: A two-column, fixed-width design with dark color scheme.
+  Version    : 1.0
+  Released   : 20130910
+  -->
   {% include head.html %}
 
   <body>
+    {% include navbar.html %}
 
-    {% include gtm_body.html %}
-  
-    {% include nav.html %}
+    <div id="wrapper" class="bg-color-white">
+    	<div class="container">
 
-    {{ content }}
+    		<div class="event-upcoming event-detail">
+    			<div id="showcase">
+    				<img src="{{ site.baseurl }}/resources/img/gothenburg.jpg" alt="Computational Typologies" class="image image-full" />
+    				<div class="event-box">
+    					<div class="event-box-title">Trends in Functional Programming in Education</div>
+    					<div class="event-box-date">June 2018<span class="date-detail">, Gothenburg, Sweden</span></div>
+    					<!-- <div class="event-box-author"></div> -->
+    				</div>
+    			</div>
+    		</div>
 
-    {% include footer.html %}
-  
-    {% include footer-scripts.html %}
-  
+    		<div class="content-event">
+
+          {{ content }}
+
+    		</div>
+
+
+
+    	</div>
+    </div>
+
+    <div id="wrapper" class="bg-color-grey-light">
+    	<div id="about" class="container center">
+
+    		<div class="content">
+
+
+    			<h3 style="margin-bottom: 18px;">Practical Info</h3>
+
+    				<div class="small-col">
+
+    					<h4>Where is it?</h4>
+    					<p>Chalmers University<br/>
+    					Maskingränd 2<br/>
+    					412 58 Göteborg, Sweden</p>
+    				</div>
+
+    				<div id="map"></div>
+
+    		</div>
+    	</div>
+    </div>
+
+    <div id="wrapper" class="bg-color-grey-dark">
+    	<div id="upcoming" class="container center">
+
+
+        {% include cfp.html %}
+
+    	</div>
+    </div>
+
+    <div id="wrapper" class="bg-color-main">
+    	<div id="footer" class="container center">
+
+    		<h3 class="color-white">Program Committee</h3>
+
+        <p class="color-white"><i>TBA :-)</i></p>
+    	</div>
+    </div>
+
+    <div id="wrapper-copyright" class="bg-color-grey-dark">
+    	<div class="container center color-grey-mid">
+    		<!-- <p>Maintained monthly in a coworking space</p> -->
+    	</div>
+    </div>
+
   </body>
 </html>
